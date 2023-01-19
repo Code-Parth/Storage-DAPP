@@ -82,7 +82,7 @@ Please install or have installed the following:
    
    Next, you need to setup the ganache network with brownie :
    ```sh
-   cd ipfs-storage-dapp
+   cd storage-dapp
    brownie networks add Ethereum ganache-local host=http://127.0.0.1:7545 chainid=5777
    ```
 4. Set your environment variables
@@ -99,7 +99,7 @@ Please install or have installed the following:
    
    After creating the app copy the URL from -view key- and run this: 
    ```sh
-   cd ipfs-storage-dapp
+   cd storage-dapp
    brownie networks add Polygon polygon-mumbai host=<Copied URL> chainid=80001 name="Mumbai Testnet (Alchemy)"
    ```
    
