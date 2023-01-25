@@ -1,23 +1,13 @@
 // The contract imports the AggregatorV3Interface from the Chainlink library, which will be used to fetch the MATIC/USD price from a Chainlink price feed.
-
 // The contract declares several variables, including the owner of the contract, the upload fee, and the address of the Chainlink price feed. It also declares a mapping data structure to store information about the files that users have uploaded.
-
 // The contract defines a struct called "File" which contains the name, size, URI, and upload date of a file.
-
 // The contract has a constructor function that is called when the contract is deployed. It takes in the address of the Chainlink price feed as an argument and assigns it to the priceFeedAddress variable. The msg.sender, who deploys the contract, is assigned as the owner.
-
 // The contract has a "onlyOwner" modifier that requires the msg.sender to be the contract owner before executing the following function.
-
 // The contract has a "setListingFee" function that allows the owner to set a new upload fee in USD. This function calls the "getMaticUsdPrice" function to convert the fee from USD to MATIC using the Chainlink price feed.
-
 // The contract has a "getListingFee" function that returns the current upload fee.
-
 // The contract has a "getMaticUsdPrice" function that fetches the MATIC/USD price from the Chainlink price feed and returns the price and the number of decimals.
-
 // The contract has an "uploadFile" function that allows users to upload a file by sending the required fee to the contract. It takes in the name, size, and URI of the file as arguments and creates a new "File" struct with this information. The function then adds the file to the mapping data structure for the user and emits a "FileAdded" event. It also transfer
-
 // the upload fee to the contract owner.
-
 // The contract has a "getUserFiles" function that allows users to view the files they have uploaded. The function takes in an address as an argument and returns the array of files that the user has uploaded. The function also checks that the msg.sender is the same as the user address passed in as an argument
 
 pragma solidity ^0.8.0;
